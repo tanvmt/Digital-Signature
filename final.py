@@ -285,11 +285,11 @@ class SignatureApp:
         self.style.theme_use('clam') # Chọn theme (có thể thử 'alt', 'default', 'classic')
 
         # --- Variables ---
-        self.ca_key_file = tk.StringVar()
-        self.ca_cert_file = tk.StringVar()
-        self.user_key_file = tk.StringVar()
-        self.user_cert_file = tk.StringVar()
-        self.password = tk.StringVar()
+        self.ca_key_file = tk.StringVar(value="ca_private_key.pem")
+        self.ca_cert_file = tk.StringVar(value="ca_certificate.pem")
+        self.user_key_file = tk.StringVar(value="user_private_key.pem")
+        self.user_cert_file = tk.StringVar(value="user_certificate.pem")
+        self.password = tk.StringVar(value="your-secure-password")
         self.data_to_sign_var = tk.StringVar()
         self.signature_var = tk.StringVar()
         self.data_to_verify_var = tk.StringVar()
